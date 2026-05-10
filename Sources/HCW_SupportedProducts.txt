@@ -1,0 +1,47 @@
+v2.8.0.26231
+
+Supported in TSReader_HCWDVBSSource.dll:
+Nova-S-USB2 DVB-S
+WinTV-HVR4000 DVB-S (No S2 support - yet).
+WinTV-HVR3000 DVB-S
+Nova-SE2 DVB-S
+Nova-S-Plus DVB-S
+
+Supported in TSReader_HCWPCI69xxx.dll:
+WinTV-HVR4000 DVB-S/S2 (No autodetect on the FEC in DVB-S2).
+
+Supported in TSReader_HCWDVBTSource.dll:
+WinTV-HVR-900 DVB-T
+WinTV-HVR-900H DVB-T
+WinTV-HVR-930 DVB-T
+WinTV-HVR-1100 DVB-T
+WinTV-HVR-1110 DVB-T
+WinTV-HVR-1300 DVB-T
+WinTV-HVR-3000 DVB-T
+WinTV-HVR-1200 DVB-T
+WinTV-HVR-1400 DVB-T
+WinTV-HVR-1700 DVB-T
+WinTV-HVR-2200 DVB-T 
+Nova-T-USB2 DVB-T
+Nova-T-PCI DVB-T
+Nova-DT (T-500) DVB-T
+Nova-T-Stick DVB-T
+Nova-T DVB-T PCIe (Model71xxx)
+Nova-TA DVB-T
+
+Supported in TSReader_HCWQAMSource.dll,
+             TSReader_HCWATSCSource.dll:
+WinTV-HVR-850 ATSC
+WinTV-HVR-950 ATSC
+WinTV-HVR-950Q ATSC / QAM
+WinTV-HVR-1600 ATSC / QAM (on 74021 models)
+WinTV-HVR-1250 ATSC / QAM
+WinTV-HVR-1500 ATSC
+WinTV-HVR-1500q ATSC / QAM
+WinTV-HVR-1800 ATSC / QAM
+WinTV-HVR-1800lp ATSC / QAM
+WinTV-HVR-1950 ATSC / QAM
+WinTV-HVR-2250 ATSC / QAM
+
+Supported in TSReader_HCWDVBCSource.dll:
+WinTV-HVR-900C DVB-C Europe
