@@ -1,6 +1,0 @@
-LIBRARY Newtec2063
-
-EXPORTS
-	GetReceiverName							@1
-	GetSerialParameters						@2
-	TuneReceiver							@3
