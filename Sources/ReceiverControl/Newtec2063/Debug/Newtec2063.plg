@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Newtec2063 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\rod\LOCALS~1\Temp\RSP8F6.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/Newtec2063.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Development\TSReader\Sources\ReceiverControl\Newtec2063\Newtec2063.c"
+]
+Creating command line "xicl6.exe @C:\DOCUME~1\rod\LOCALS~1\Temp\RSP8F6.tmp" 
+Creating temporary file "C:\DOCUME~1\rod\LOCALS~1\Temp\RSP8F7.tmp" with contents
+[
+..\..\..\SampleSource\Lib\TSReader_SourceHelper.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/Newtec2063.pdb" /machine:I386 /def:".\Newtec2063.def" /out:"../Newtec2063.dll" /implib:"Release/Newtec2063.lib" 
+.\Release\Newtec2063.obj
+]
+Creating command line "xilink6.exe @C:\DOCUME~1\rod\LOCALS~1\Temp\RSP8F7.tmp"
+<h3>Output Window</h3>
+Compiling...
+Newtec2063.c
+Linking...
+   Creating library Release/Newtec2063.lib and object Release/Newtec2063.exp
+
+
+
+<h3>Results</h3>
+Newtec2063.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
