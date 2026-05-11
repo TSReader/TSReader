@@ -1,0 +1,7 @@
+LIBRARY AlteiaPlus
+
+EXPORTS
+	GetReceiverName							@1
+	GetSerialParameters						@2
+	TuneReceiver							@3
+	SetChannel								@4
