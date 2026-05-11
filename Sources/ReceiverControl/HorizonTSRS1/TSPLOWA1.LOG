@@ -1,0 +1,5 @@
+FAIL:Can not find device from the system
+Fail to open wdm driver
+DLLMAIN:attached
+DLLMAIN:process detach
+CLOSE system

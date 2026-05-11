@@ -1,0 +1,11 @@
+LIBRARY HorizonTSRS1
+
+EXPORTS
+	GetReceiverName							@1
+	GetSerialParameters						@2
+	TuneReceiver							@3
+	SetChannel								@4
+	StartSerial								@5
+	StopSerial								@6
+	GetSignal								@7
+
