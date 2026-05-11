@@ -1,0 +1,34 @@
+
+Supported products:
+
+WinTV-HVR900 DVB-T
+WinTV-HVR930 DVB-T
+WinTV-HVR950 ATSC
+WinTV-HVR1100 DVB-T
+WinTV-HVR1110 DVB-T
+WinTV-HVR1300 DVB-T
+WinTV-HVR1600 ATSC / QAM (on 74021 models)
+WinTV-HVR3000 DVB-T / DVB-S
+WinTV-HVR4000 DVB-S/S2 (S2 is a little experimental, no autodetect on the FEC).
+Nova-T-USB2 DVB-T
+Nova-T-PCI DVB-T
+Nova-SE2 DVB-S
+Nova-S-Plus DVB-S
+Nova-DT (T-500) DVB-T
+Nova-T-Stick DVB-T
+Nova-T DVB-T PCIe (Model71xxx)
+
+All Hauppauge Clear QAM products are now supported with the single HCWQAMSource.dll,
+but the HVR1600qam remains in this archive 'just in case'. This generic HCW source supports
+the following models.
+WinTV-HVR-1250
+WinTV-HVR-1500
+WinTV-HVR-1800
+WinTV-HVR-1800lp
+
+In Addition, the TSR generic ATSC source is known to work for the following Hauppauge products:
+WinTV-HVR-1250
+WinTV-HVR-1500
+WinTV-HVR-1800
+WinTV-HVR-1800lp
+
