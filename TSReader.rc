@@ -176,7 +176,7 @@ BEGIN
     DEFPUSHBUTTON   "OK",IDOK,159,156,50,14
     ICON            IDD_DVB_LOGO,IDC_STATIC,8,6,20,20
     LTEXT           "IDC_VERSION",IDC_VERSION,43,2,164,9
-    LTEXT           "Copyright © 2003-2007 COOLSTF.com Inc.",IDC_STATIC,43,
+    LTEXT           "Copyright ï¿½ 2003-2007 COOLSTF.com Inc.",IDC_STATIC,43,
                     23,164,8
     LTEXT           "IDC_CURRENT_SOURCE",IDC_CURRENT_SOURCE,48,84,159,9
     RTEXT           "Source",IDC_CURRENT_SOURCE_CAPTION,8,84,35,8
@@ -3060,8 +3060,8 @@ VS_VERSION_INFO$(STANDARD_ICON) VERSIONINFO
 #else
 VS_VERSION_INFO VERSIONINFO
 #endif
- FILEVERSION 2,8,53,0
- PRODUCTVERSION 2,8,53,0
+ FILEVERSION 2,8,53,6
+ PRODUCTVERSION 2,8,53,6
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -3079,14 +3079,14 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", "COOLSTF.com Inc.\0"
             VALUE "FileDescription", "TSReader\0"
-            VALUE "FileVersion", "2.8.53b-memorial\0"
+            VALUE "FileVersion", "2.8.53h-memorial\0"
             VALUE "InternalName", "TSReader\0"
-            VALUE "LegalCopyright", "Copyright © 2003-2008 COOLSTF.com Inc. - Memorial build 2026\0"
+            VALUE "LegalCopyright", "Copyright ï¿½ 2003-2008 COOLSTF.com Inc. - Memorial build 2026\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "TSReader.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "TSReaderPro\0"
-            VALUE "ProductVersion", "2.8.53b-memorial\0"
+            VALUE "ProductVersion", "2.8.53h-memorial\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -3103,8 +3103,8 @@ VS_VERSION_INFO$(ATSC_ICON) VERSIONINFO
 #else
 VS_VERSION_INFO VERSIONINFO
 #endif
- FILEVERSION 2,8,53,0
- PRODUCTVERSION 2,8,53,0
+ FILEVERSION 2,8,53,6
+ PRODUCTVERSION 2,8,53,6
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -3122,14 +3122,14 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", "COOLSTF.com Inc.\0"
             VALUE "FileDescription", "DTVSentinel\0"
-            VALUE "FileVersion", "2.8.53b-memorial\0"
+            VALUE "FileVersion", "2.8.53h-memorial\0"
             VALUE "InternalName", "TSReader\0"
-            VALUE "LegalCopyright", "Copyright © 2003-2008 COOLSTF.com Inc. - Memorial build 2026\0"
+            VALUE "LegalCopyright", "Copyright ï¿½ 2003-2008 COOLSTF.com Inc. - Memorial build 2026\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "DTVSentinel.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "COOLSTF.com DTVSentinel\0"
-            VALUE "ProductVersion", "2.8.53b-memorial\0"
+            VALUE "ProductVersion", "2.8.53h-memorial\0"
             VALUE "SpecialBuild", "\0"
         END
     END

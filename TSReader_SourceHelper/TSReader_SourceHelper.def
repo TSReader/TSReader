@@ -48,3 +48,21 @@ EXPORTS
 	SourceHelper_TCPTuneDialog						@46
 	SourceHelper_ISDBTTuneDialog					@47
 	SourceHelper_GetQAMHRCStatus					@48
+	; Ordinals 49-63 added 2018 — provided here so prebuilt 2019-2022
+	; source plugins (esp. TBS BDA tuners in Sources_Archive) can resolve
+	; their imports. Implementations are stubs in TSReader_SourceHelper.c.
+	SourceHelper_Parse_CommandLine_ATSC				@49
+	SourceHelper_Parse_CommandLine_QAM				@50
+	SourceHelper_Parse_CommandLine_DVBS				@51
+	SourceHelper_Parse_CommandLine_DVBT				@52
+	SourceHelper_Parse_CommandLine_DVBC				@53
+	SourceHelper_Parse_CommandLine_ADV				@54
+	SourceHelper_OutputDebugString					@55
+	SourceHelper_GetSourceBufferEventHandle			@56
+	SourceHelper_ReadLineW							@57
+	SourceHelper_myGetOpenFileNameW					@58
+	SourceHelper_ReadLineUnix						@59
+	SourceHelper_RunningOnWine						@60
+	SourceHelper_LogRTPLoss							@61
+	SourceHelper_Parse_CommandLine_DVBC2			@62
+	SourceHelper_DVBC2TuneDialog					@63

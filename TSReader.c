@@ -20608,6 +20608,13 @@ LRESULT FAR PASCAL MainWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPara
 							break;
 						}
 						EnableDisableSourceMenuItems(hWnd);
+						// Plugins keep their PSOURCESTRUCT pointer in a static set
+						// by TSReader_Init. LoadSource only rebinds host-side
+						// function pointers, so we must still call Init on the
+						// fresh plugin before its TuneDialog runs — otherwise it
+						// dereferences a NULL ss and faults at offset ~0x1851
+						// (seen with TSReader_UDPMulticast.dll v2.6.0.41).
+						Init(&v->ss);
 						continue;		// retry with the newly-chosen source
 					}
 					CursorWait(hWnd);

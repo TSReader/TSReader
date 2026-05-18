@@ -47,11 +47,30 @@ if(MSVC)
 endif()
 
 # ============================================================
-# TSReader_SourceHelper (pre-built import library)
+# TSReader_SourceHelper — built from source
+# Ordinals 1-48 are real implementations from the in-repo C source;
+# ordinals 49-63 are stubs (see TSReader_SourceHelper.c "Stubs for
+# SourceHelper functions added between 2008 and 2018"). Building it
+# ourselves means the VARIABLES struct layout always matches the host
+# regardless of MAX_SOURCE_MODULES, fixing KNOWN_ISSUES BA-1.
 # ============================================================
-add_library(TSReader_SourceHelper STATIC IMPORTED)
-set_target_properties(TSReader_SourceHelper PROPERTIES
-    IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/TSReader_SourceHelper.lib"
+add_library(TSReader_SourceHelper SHARED
+    TSReader_SourceHelper/TSReader_SourceHelper.c
+    TSReader_SourceHelper/serial.c
+    TSReader_SourceHelper/crc.c
+    TSReader_SourceHelper/TSReader_SourceHelper.rc
+    TSReader_SourceHelper/TSReader_SourceHelper.def
+)
+target_include_directories(TSReader_SourceHelper PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs
+    ${CMAKE_CURRENT_SOURCE_DIR}/TSReader_SourceHelper
+    ${CMAKE_CURRENT_SOURCE_DIR}/Md/MULTIDEC
+)
+target_link_libraries(TSReader_SourceHelper PRIVATE
+    kernel32 user32 gdi32 advapi32 shell32
+    ole32 oleaut32 comctl32 comdlg32 ws2_32 winmm
 )
 
 # ============================================================
@@ -240,6 +259,12 @@ target_include_directories(TSReader PRIVATE
 
 set_target_properties(TSReader PROPERTIES OUTPUT_NAME "TSReaderPro")
 
+# STANDARD_ICON gates the VS_VERSION_INFO block in TSReader.rc.
+# Without it, rc.exe preprocesses the entire VERSIONINFO out and the
+# resulting exe ships with FileVersion 0.0.0.0. CMake's MSVC generator
+# propagates target_compile_definitions to rc.exe as well as cl.exe.
+target_compile_definitions(TSReader PRIVATE STANDARD_ICON)
+
 target_link_libraries(TSReader PRIVATE
     TSReader_SourceHelper
     h264decoder
@@ -258,8 +283,9 @@ target_link_libraries(TSReader PRIVATE
     odbc32 odbccp32
 )
 
-# Copy runtime DLLs
-foreach(DLL libfaad2.dll PEGRPCS.DLL TSReader_SourceHelper.dll)
+# Copy runtime DLLs (TSReader_SourceHelper.dll is now built directly
+# into $<TARGET_FILE_DIR:TSReader> by its own CMake target above)
+foreach(DLL libfaad2.dll PEGRPCS.DLL)
     if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${DLL}")
         add_custom_command(TARGET TSReader POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_if_different

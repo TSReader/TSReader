@@ -6784,6 +6784,100 @@ BOOL SourceHelper_GetProfileName(char * szBuffer)
 #endif PRO
 }
 
+// =====================================================================
+// Stubs for SourceHelper functions added between 2008 and 2018 that
+// the in-repo source predates. The prebuilt 2019-2022 source plugins
+// (notably the TBS BDA tuner DLLs in Sources_Archive/) import these
+// by ordinal and need them to exist for LoadLibrary to succeed.
+// Returning FALSE/0/NULL leaves the new functionality silently
+// disabled; fully restoring each function would require access to
+// Rod's post-2008 SourceHelper source. All stubs are __cdecl (C
+// default on x86), so even argument-count mismatches between the
+// plugin's call site and our stub are absorbed by the caller-cleans-
+// the-stack convention.
+// =====================================================================
+
+BOOL SourceHelper_DVBC2TuneDialog(HWND hWnd)
+{
+	(void)hWnd;
+	return FALSE;
+}
+
+HANDLE SourceHelper_GetSourceBufferEventHandle(void)
+{
+	return NULL;
+}
+
+void SourceHelper_LogRTPLoss(int nLoss, int nTotal)
+{
+	(void)nLoss; (void)nTotal;
+}
+
+void SourceHelper_OutputDebugString(const char * sz)
+{
+	if (sz != NULL)
+		OutputDebugStringA(sz);
+}
+
+BOOL SourceHelper_Parse_CommandLine_ATSC(char * szCmd)
+{
+	(void)szCmd;
+	return FALSE;
+}
+
+BOOL SourceHelper_Parse_CommandLine_QAM(char * szCmd)
+{
+	(void)szCmd;
+	return FALSE;
+}
+
+BOOL SourceHelper_Parse_CommandLine_DVBS(char * szCmd)
+{
+	(void)szCmd;
+	return FALSE;
+}
+
+BOOL SourceHelper_Parse_CommandLine_DVBT(char * szCmd)
+{
+	(void)szCmd;
+	return FALSE;
+}
+
+BOOL SourceHelper_Parse_CommandLine_DVBC(char * szCmd)
+{
+	(void)szCmd;
+	return FALSE;
+}
+
+BOOL SourceHelper_Parse_CommandLine_ADV(char * szCmd)
+{
+	(void)szCmd;
+	return FALSE;
+}
+
+BOOL SourceHelper_Parse_CommandLine_DVBC2(char * szCmd)
+{
+	(void)szCmd;
+	return FALSE;
+}
+
+int SourceHelper_ReadLineW(HANDLE hFile, wchar_t * szBuffer, int nMaxLength)
+{
+	(void)hFile; (void)szBuffer; (void)nMaxLength;
+	return 0;
+}
+
+BOOL SourceHelper_myGetOpenFileNameW(void * lpofn)
+{
+	(void)lpofn;
+	return FALSE;
+}
+
+BOOL SourceHelper_RunningOnWine(void)
+{
+	return FALSE;
+}
+
 BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     switch( ul_reason_for_call )
