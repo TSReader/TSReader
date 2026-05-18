@@ -753,8 +753,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,8,46,1
- PRODUCTVERSION 2,8,0,0
+ FILEVERSION 2,8,53,6
+ PRODUCTVERSION 2,8,53,6
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -772,14 +772,14 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", "COOLSTF.com\0"
             VALUE "FileDescription", "Source Helper\0"
-            VALUE "FileVersion", "2, 8, 46, 1\0"
+            VALUE "FileVersion", "2.8.53h-memorial\0"
             VALUE "InternalName", "TSReader_SourceHelper\0"
-            VALUE "LegalCopyright", "Copyright © 2003-2007 COOLSTF.com Inc.\0"
+            VALUE "LegalCopyright", "Copyright ï¿½ 2003-2008 COOLSTF.com Inc. - Memorial build 2026\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "TSReader_SourceHelper.dll\0"
             VALUE "PrivateBuild", "\0"
-            VALUE "ProductName", "COOLSTF.com TSReader\0"
-            VALUE "ProductVersion", "2, 8, 0, 0\0"
+            VALUE "ProductName", "TSReaderPro\0"
+            VALUE "ProductVersion", "2.8.53h-memorial\0"
             VALUE "SpecialBuild", "\0"
         END
     END
